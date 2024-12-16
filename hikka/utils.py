@@ -933,7 +933,7 @@ def get_named_platform() -> str:
         return "🌼 HikkaHost"
 
     if main.IS_DOCKER:
-        return "🐳 Docker"
+        return "🎡 D&J | Host"
 
     if main.IS_TERMUX:
         return "🕶 Termux"
@@ -963,7 +963,7 @@ def get_platform_emoji() -> str:
     )
 
     if main.IS_DOCKER:
-        return BASE.format(5298554256603752468)
+        return BASE.format(5116124086187066526)
 
     if main.IS_ORACLE:
         return BASE.format(5195381467047288408)
