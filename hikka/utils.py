@@ -994,7 +994,7 @@ def get_platform_emoji() -> str:
         return BASE.format(5352539534498224966)
 
     if main.IS_DOCKER:
-        return BASE.format(5116124086187066526)
+        return BASE.format(5116472489639150735)
 
     if main.IS_DJHOST:
         return BASE.format(5226711870492126219)
