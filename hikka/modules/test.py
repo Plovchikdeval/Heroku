@@ -321,7 +321,7 @@ class TestMod(loader.Module):
             *main.__version__,
             (
                 " <a"
-                f' href="https://github.com/coddrago/Heroku/commit/{ghash}">@{ghash[:8]}</a>'
+                f' href="https://github.com/Plovchikdeval/Heroku/commit/{ghash}">@{ghash[:8]}</a>'
                 if ghash
                 else ""
             ),
@@ -372,6 +372,7 @@ class TestMod(loader.Module):
                 ),
                 hostname=subprocess.run(['hostname'], stdout=subprocess.PIPE).stdout.decode().strip(),
                 user=subprocess.run(['whoami'], stdout=subprocess.PIPE).stdout.decode().strip(),
+                platform = utils.get_named_platform(),
     ),
         )
 
