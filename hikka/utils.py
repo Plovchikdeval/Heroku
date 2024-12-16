@@ -994,7 +994,7 @@ def get_platform_emoji() -> str:
         return BASE.format(5352539534498224966)
 
     if main.IS_DOCKER:
-        return BASE.format(5226711870492126219)
+        return BASE.format(5116124086187066526)
 
     if main.IS_DJHOST:
         return BASE.format(5226711870492126219)
@@ -1590,7 +1590,7 @@ def get_git_info() -> typing.Tuple[str, str]:
     hash_ = get_git_hash()
     return (
         hash_,
-        f"https://github.com/coddrago/Heroku/commit/{hash_}" if hash_ else "",
+        f"https://github.com/Plovchikdeval/Heroku/commit/{hash_}" if hash_ else "",
     )
 
 
