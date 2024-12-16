@@ -941,6 +941,9 @@ def get_named_platform() -> str:
     if main.IS_CODESPACES:
         return "🐈‍⬛ Codespaces"
 
+    if main.IS_DJHOST:
+        return "🎡 D&J | Host"
+
     return f"✌️ lavHost {os.environ['LAVHOST']}" if main.IS_LAVHOST else "💎 VDS"
 
 
@@ -992,6 +995,9 @@ def get_platform_emoji() -> str:
 
     if main.IS_DOCKER:
         return BASE.format(5352678227582152630)
+
+    if main.IS_DJHOST:
+        return BASE.format(5226711870492126219)
 
     return BASE.format(5393588431026674882)
 
