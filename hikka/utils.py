@@ -963,7 +963,7 @@ def get_platform_emoji() -> str:
     )
 
     if main.IS_DOCKER:
-        return BASE.format(5116124086187066526)
+        return BASE.format(5116424450429944875)
 
     if main.IS_ORACLE:
         return BASE.format(5195381467047288408)
