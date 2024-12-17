@@ -930,13 +930,13 @@ def get_platform_emoji() -> str:
         )
     )
 
-if main.IS_DOCKER:
-   return BASE.format(5116472489639150735)
-
-if main.IS_DJHOST:
-   return BASE.format(5226711870492126219)
-
-return BASE.format(5393588431026674882)
+    if main.IS_DOCKER:
+        return BASE.format(5116472489639150735)
+        
+    if main.IS_DJHOST:
+        return BASE.format(5226711870492126219)
+        
+    return BASE.format(5393588431026674882)
 
 
 
