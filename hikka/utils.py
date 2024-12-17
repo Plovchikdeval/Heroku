@@ -712,7 +712,7 @@ async def invite_inline_bot(
                 channel=peer,
                 user_id=client.loader.inline.bot_username,
                 admin_rights=ChatAdminRights(ban_users=True),
-                rank="Hikka",
+                rank="Heroku",
             )
         )
 
@@ -923,19 +923,24 @@ def get_platform_emoji() -> str:
 
     BASE = "".join(
         (
-            "<emoji document_id={}>🌘</emoji>",
-            "<emoji document_id=5195311729663286630>🌘</emoji>",
-            "<emoji document_id=5195045669324201904>🌘</emoji>",
+            "<emoji document_id={}>🪐</emoji>",
+            "<emoji document_id=5352934134618549768>🪐</emoji>",
+            "<emoji document_id=5352663371290271790>🪐</emoji>",
+            "<emoji document_id=5350822883314655367>🪐</emoji>",
         )
     )
 
-    if main.IS_DOCKER:
-       return BASE.format(5404567123349497186)
+if main.IS_DOCKER:
 
-    if main.IS_DJHOST:
-       return BASE.format(5226711870492126219)
-        
-    return BASE.format(5192765204898783881)
+    return BASE.format(5116472489639150735)
+
+if main.IS_DJHOST:
+
+    return BASE.format(5226711870492126219)
+
+return BASE.format(5393588431026674882)
+
+
 
 
 def uptime() -> int:
@@ -1231,12 +1236,12 @@ def get_git_hash() -> typing.Union[str, bool]:
 
 def get_commit_url() -> str:
     """
-    Get current Hikka git commit url
+    Get current Heroku git commit url
     :return: Git commit url
     """
     try:
         hash_ = get_git_hash()
-        return f'<a href="https://github.com/coddrago/Hikka/commit/{hash_}">#{hash_[:7]}</a>'
+        return f'<a href="https://github.com/coddrago/Heroku/commit/{hash_}">#{hash_[:7]}</a>'
     except Exception:
         return "Unknown"
 
@@ -1526,7 +1531,7 @@ def get_git_info() -> typing.Tuple[str, str]:
     hash_ = get_git_hash()
     return (
         hash_,
-        f"https://github.com/coddrago/Hikka/commit/{hash_}" if hash_ else "",
+        f"https://github.com/Plovchikdeval/Heroku/commit/{hash_}" if hash_ else "",
     )
 
 
