@@ -905,41 +905,8 @@ def get_named_platform() -> str:
 
                 return f"🍇 {model}" if "Raspberry" in model else f"❓ {model}"
 
-    if main.IS_WSL:
-        return "🍀 WSL"
-
-    if main.IS_ORACLE:
-        return "😶‍🌫️ Oracle"
-
-    if main.IS_AWS:
-        return "😶‍🌫️ AWS"
-
-    if main.IS_SERV00:
-        return "💎 Serv00"
-
-    if main.IS_TOTHOST:
-        return "💘 ToTHost"
-
-    if main.IS_AEZA:
-        return "🛡 Aeza"
-
-    if main.IS_GOORM:
-        return "🦾 GoormIDE"
-
-    if main.IS_RAILWAY:
-        return "🚂 Railway"
-
-    if main.IS_HIKKAHOST:
-        return "🌼 HikkaHost"
-
     if main.IS_DOCKER:
         return "🎡 D&J | Host"
-
-    if main.IS_TERMUX:
-        return "🕶 Termux"
-
-    if main.IS_CODESPACES:
-        return "🐈‍⬛ Codespaces"
 
     if main.IS_DJHOST:
         return "🎡 D&J | Host"
@@ -962,36 +929,6 @@ def get_platform_emoji() -> str:
             "<emoji document_id=5350822883314655367>🪐</emoji>",
         )
     )
-
-    if main.IS_TOTHOST:
-        return BASE.format(5372887118156683469)
-
-    if main.IS_HIKKAHOST:
-        return BASE.format(5395745114494624362)
-
-    if main.IS_ORACLE:
-        return BASE.format(5195381467047288408)
-
-    if main.IS_AWS:
-        return BASE.format(5197529358717179346)
-
-    if main.IS_SERV00:
-        return BASE.format(5192765204898783881)
-
-    if main.IS_LAVHOST:
-        return BASE.format(5352753797531721191)
-
-    if main.IS_GOORM:
-        return BASE.format(5298947740032573902)
-
-    if main.IS_CODESPACES:
-        return BASE.format(5350807743554937610)
-
-    if main.IS_TERMUX:
-        return BASE.format(5350588498359377932)
-
-    if main.IS_RAILWAY:
-        return BASE.format(5352539534498224966)
 
     if main.IS_DOCKER:
         return BASE.format(5116472489639150735)
