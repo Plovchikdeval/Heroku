@@ -28,7 +28,7 @@ class HikkaInfoMod(loader.Module):
 
             loader.ConfigValue(
                 "banner_url",
-                "https://imgur.com/a/7LBPJiq.png",
+                "https://github.com/Plovchikdeval/Heroku/raw/refs/heads/v1.7.0/assets/heroku_info.jpg",
                 lambda: self.strings("_cfg_banner"),
                 validator=loader.validators.Link(),
             ),
