@@ -712,7 +712,7 @@ async def invite_inline_bot(
                 channel=peer,
                 user_id=client.loader.inline.bot_username,
                 admin_rights=ChatAdminRights(ban_users=True),
-                rank="Heroku",
+                rank="Hikka",
             )
         )
 
@@ -905,8 +905,41 @@ def get_named_platform() -> str:
 
                 return f"🍇 {model}" if "Raspberry" in model else f"❓ {model}"
 
+    if main.IS_WSL:
+        return "🍀 WSL"
+
+    if main.IS_ORACLE:
+        return "😶‍🌫️ Oracle"
+
+    if main.IS_AWS:
+        return "😶‍🌫️ AWS"
+
+    if main.IS_SERV00:
+        return "💎 Serv00"
+
+    if main.IS_TOTHOST:
+        return "💘 ToTHost"
+
+    if main.IS_AEZA:
+        return "🛡 Aeza"
+
+    if main.IS_GOORM:
+        return "🦾 GoormIDE"
+
+    if main.IS_RAILWAY:
+        return "🚂 Railway"
+
+    if main.IS_HIKKAHOST:
+        return "🌼 HikkaHost"
+
     if main.IS_DOCKER:
-        return "🎡 D&J | Host"
+        return "🐳 Docker"
+
+    if main.IS_TERMUX:
+        return "🕶 Termux"
+
+    if main.IS_CODESPACES:
+        return "🐈‍⬛ Codespaces"
 
     if main.IS_DJHOST:
         return "🎡 D&J | Host"
@@ -923,22 +956,47 @@ def get_platform_emoji() -> str:
 
     BASE = "".join(
         (
-            "<emoji document_id={}>🪐</emoji>",
-            "<emoji document_id=5352934134618549768>🪐</emoji>",
-            "<emoji document_id=5352663371290271790>🪐</emoji>",
-            "<emoji document_id=5350822883314655367>🪐</emoji>",
+            "<emoji document_id={}>🌘</emoji>",
+            "<emoji document_id=5195311729663286630>🌘</emoji>",
+            "<emoji document_id=5195045669324201904>🌘</emoji>",
         )
     )
 
     if main.IS_DOCKER:
-        return BASE.format(5116472489639150735)
-        
+        return BASE.format(5298554256603752468)
+
+    if main.IS_ORACLE:
+        return BASE.format(5195381467047288408)
+
+    if main.IS_AWS:
+        return BASE.format(5197529358717179346)
+
+    if main.IS_SERV00:
+        return BASE.format(5192765204898783881)
+
+    if main.IS_LAVHOST:
+        return BASE.format(5301078610747074753)
+
+    if main.IS_GOORM:
+        return BASE.format(5298947740032573902)
+
+    if main.IS_CODESPACES:
+        return BASE.format(5194976881127989720)
+
+    if main.IS_TERMUX:
+        return BASE.format(5193051778001673828)
+
+    if main.IS_RAILWAY:
+        return BASE.format(5199607521593007466)
+
+    if main.IS_HIKKAHOST:
+        return BASE.format(5370731117588523522)
+
     if main.IS_DJHOST:
         return BASE.format(5226711870492126219)
         
-    return BASE.format(5393588431026674882)
 
-
+    return BASE.format(5192765204898783881)
 
 
 def uptime() -> int:
@@ -1234,12 +1292,12 @@ def get_git_hash() -> typing.Union[str, bool]:
 
 def get_commit_url() -> str:
     """
-    Get current Heroku git commit url
+    Get current Hikka git commit url
     :return: Git commit url
     """
     try:
         hash_ = get_git_hash()
-        return f'<a href="https://github.com/coddrago/Heroku/commit/{hash_}">#{hash_[:7]}</a>'
+        return f'<a href="https://github.com/Plovchikdeval/Hikka/commit/{hash_}">#{hash_[:7]}</a>'
     except Exception:
         return "Unknown"
 
@@ -1529,7 +1587,7 @@ def get_git_info() -> typing.Tuple[str, str]:
     hash_ = get_git_hash()
     return (
         hash_,
-        f"https://github.com/Plovchikdeval/Heroku/commit/{hash_}" if hash_ else "",
+        f"https://github.com/Plovchikdeval/Hikka/commit/{hash_}" if hash_ else "",
     )
 
 
