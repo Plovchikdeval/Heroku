@@ -108,7 +108,6 @@ class LoaderMod(loader.Module):
         )
         logger.debug("Modules: %s", modules)
         asyncio.ensure_future(self._storage.preload(modules))
-        asyncio.ensure_future(self._storage.preload_main_repo())
 
     async def client_ready(self):
         while not (settings := self.lookup("settings")):
@@ -389,7 +388,7 @@ class LoaderMod(loader.Module):
         ):
             if message.file:
                 await message.edit("")
-                message = await message.respond("🌘", reply_to=utils.get_topic(message))
+                message = await message.respond("🪐", reply_to=utils.get_topic(message))
 
             if await self.inline.form(
                 self.strings("module_fs"),
